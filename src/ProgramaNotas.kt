@@ -15,6 +15,7 @@ fun main() {
     }
 }
 
+
 fun boasVindas(){
     println("Bem vindo ao sistema de cálculo de média das notas das Avaliações da Escola de SimCity!!!")
     println("Vamos começar?")
@@ -46,25 +47,24 @@ fun calcMedia(notas: Array<Double>): Double{
     return media / notas.size
 }
 
+
 fun menu(){
     println()
     println("Novo cálculo (1 - sim // 2 - não)")
-    var opcao = readln().toInt()
-    while (opcao != 1 && opcao != 2){
-        println("Valor digitado deve ser 1 para continuar e 2 para sair.")
-        println("Digite novamente.")
-        println("Novo cálculo (1 - sim // 2 - não)")
-        opcao = readln().toInt()
-    }
+    val opcao = readln().toInt()
+
     when(opcao){
+        1 -> {
+            println("Novo cálculo...")
+            println()
+        }
         2 -> {
             println("Obrigado por utilizar nosso sitema.\nAté mais!")
             exitProcess(0)
         }
         else -> {
-            println("Novo cálculo...")
-            println()
+            println("Opção inválida!")
+            menu()
         }
-
     }
 }
