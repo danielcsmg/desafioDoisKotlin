@@ -16,7 +16,7 @@ fun main() {
 }
 
 fun boasVindas(){
-    println("Bem vindo ao sistema de cálculo de notas da Escola de SimCity!!!")
+    println("Bem vindo ao sistema de cálculo de média das notas das Avaliações da Escola de SimCity!!!")
     println("Vamos começar?")
     println("As notas devem ser digitadas num intervalo de 0 a 10.")
     println()
@@ -26,7 +26,7 @@ fun boasVindas(){
 fun pegarNota(i: Int): Double{
     var nota: Double
     do {
-        println("Digite a ${i+1}ª nota:")
+        println("Digite a ${i+1}ª nota da avaliação do aluno:")
         nota = readln().toDouble()
         if (nota !in 0.0..10.0) {
             println("nota inválida!")
